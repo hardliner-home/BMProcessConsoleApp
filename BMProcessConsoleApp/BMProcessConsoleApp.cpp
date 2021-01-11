@@ -72,7 +72,7 @@ using namespace std;
 //	return img;
 //}
 
-void rotate(char* degree) {
+void bright(char* degree) {
 	printf("commandStr %s\n", degree);
 }
 
@@ -148,9 +148,9 @@ int main()
 	printf("commandStr %s\n", commandStr);
 	printf("paramsStr %s\n", paramsStr);
 
-	if (!strcmp(commandStr, "rotate")) {
+	if (!strcmp(commandStr, "bright")) {
 		//printf("commandStr %s\n", commandStr);
-		rotate(paramsStr);
+		bright(paramsStr);
 	}
 	else if (!strcmp(commandStr, "flip")) {
 		printf("commandStr %s\n", commandStr);
