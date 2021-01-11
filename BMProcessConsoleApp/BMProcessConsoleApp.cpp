@@ -6,80 +6,28 @@
 
 using namespace std;
 
-//char* getLine() {
-//	char *line;
-//	int len = 1001;
-//	line = (char*)malloc(len);
-//	gets_s(line, 1000);
-//	return line;
-//}
+void rotate(char* filesStr, char* Angle) {
+	printf("commandStr %s\n", Angle);
+}
 
-//void getLineParams(char* str) {
-//	int i = 0;
-//	int j = 0;
-//	int variableChanger = 0;
-//	char *filesStr;
-//	char commandStr;
-//	char paramsStr;
-//	while (str[i] != '\0') {
-//		switch (variableChanger) {
-//			case 0: {
-//				if (str[i] != ':') {
-//					filesStr[j] = str[i];
-//				} else {
-//					variableChanger++;
-//					j = 0;
-//				}
-//				break;
-//			}
-//			case 1: {
-//				if (str[i] != ':') {
-//					commandStr[j] = str[i];
-//				}
-//				else {
-//					variableChanger++;
-//					j = 0;
-//				}
-//				break;
-//			}
-//			default: break;
-//		}
-//		i++;
-//		j++;
-//	}
-//	printf("%s\n", filesStr);
-//	printf("%s\n", commandStr);
-//	//return;
-//}
+void flip(char* filesStr, char* DIR) {
+	printf("commandStr %s\n", DIR);
+}
 
-//double rotate(double img) {
-//	return img;
-//}
-//
-//double flip(double img) {
-//	return img;
-//}
-//
-//double upscale(double img) {
-//	return img;
-//}
-//
-//double downscale(double img) {
-//	return img;
-//}
-//
-//double bright(double img) {
-//	return img;
-//}
+void upscale(char* filesStr, char* VH) {
+	printf("commandStr %s\n", VH);
+}
 
-void bright(char* degree) {
-	printf("commandStr %s\n", degree);
+void downscale(char* filesStr, char* VH) {
+	printf("commandStr %s\n", VH);
+}
+
+void bright(char* filesStr, char* f) {
+	printf("commandStr %s\n", f);
 }
 
 int main()
 {
-	//char* inputLine = getLine();
-	//getLineParams(inputLine);
 	char filesStr[301];
 	char commandStr[100];
 	char paramsStr[100];
@@ -127,33 +75,26 @@ int main()
 					paramsStr[i] = '\0';
 					stop = 1;
 				}
-
-				//if (c != '\0') {
-				//	if (c != ' ') {
-				//		paramsStr[i] = c;
-				//		i++;
-				//	}
-				//}
-				//else {
-				//	paramsStr[i - 1] = '\0';
-				//	i = 0;
-				//}
 				break;
 			}
 		}
 		
 	}
 
-	printf("filesStr %s\n", filesStr);
-	printf("commandStr %s\n", commandStr);
-	printf("paramsStr %s\n", paramsStr);
-
-	if (!strcmp(commandStr, "bright")) {
-		//printf("commandStr %s\n", commandStr);
-		bright(paramsStr);
+	if (!strcmp(commandStr, "rotate")) {
+		rotate(filesStr, paramsStr);
 	}
 	else if (!strcmp(commandStr, "flip")) {
-		printf("commandStr %s\n", commandStr);
+		flip(filesStr, paramsStr);
+	}
+	else if (!strcmp(commandStr, "upscale")) {
+		upscale(filesStr, paramsStr);
+	}
+	else if (!strcmp(commandStr, "downscale")) {
+		downscale(filesStr, paramsStr);
+	}
+	else if (!strcmp(commandStr, "bright")) {
+		bright(filesStr, paramsStr);
 	}
 	else {
 		printf("commandStr %s\n", "ti loh");
