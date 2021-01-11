@@ -72,6 +72,10 @@ using namespace std;
 //	return img;
 //}
 
+void rotate(char* degree) {
+	printf("commandStr %s\n", degree);
+}
+
 int main()
 {
 	//char* inputLine = getLine();
@@ -143,5 +147,16 @@ int main()
 	printf("filesStr %s\n", filesStr);
 	printf("commandStr %s\n", commandStr);
 	printf("paramsStr %s\n", paramsStr);
-    system("pause");
+
+	if (!strcmp(commandStr, "rotate")) {
+		//printf("commandStr %s\n", commandStr);
+		rotate(paramsStr);
+	}
+	else if (!strcmp(commandStr, "flip")) {
+		printf("commandStr %s\n", commandStr);
+	}
+	else {
+		printf("commandStr %s\n", "ti loh");
+	}
+	system("pause");
 }
