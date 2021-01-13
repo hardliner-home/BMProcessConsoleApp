@@ -2,12 +2,10 @@
 #ifndef BMPModule_H
 #define BMPModule_H
 
-char getLine(char CommandStr[501]);
-char getLineParams(char str[501]);
-double rotate(double img);
-double flip(double img);
-double upscale(double img);
-double downscale(double img);
-double bright(double img);
+void rotate(char* filesStr, char* Angle);
+void flip(char* filesStr, char* DIR);
+void upscale(char* filesStr, char* VH);
+void downscale(char* filesStr, char* VH);
+void bright(char* filesStr, char* f);
 
 #endif
